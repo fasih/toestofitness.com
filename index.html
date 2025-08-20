@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toes To Fitness — Personal Fitness Brand</title>
+  <meta name="description" content="Toes To Fitness — personal training, nutrition coaching, and fitness programs." />
+  <style>
+    :root{
+      --accent:#ff6b6b;
+      --dark:#0f1724;
+      --muted:#94a3b8;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.04);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071129 0%, #07172a 100%);color:#e6eef8;line-height:1.45}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),#ff9a9a);font-weight:700;color:#07203a;box-shadow:0 6px 18px rgba(255,107,107,0.12)
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{color:#fff}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
+    .hero h1{font-size:36px;margin:0 0 12px;color:#fff}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--accent);color:#07203a}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Card with illustration */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .ill{height:515px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px}
+    .ill img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+
+    /* Sections */
+    section{padding:34px 0;border-top:1px solid rgba(255,255,255,0.02)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:var(--card);padding:18px;border-radius:12px}
+    .feature h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
+
+    /* Testimonials */
+    .test{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(0deg,#08314a,#07445e);display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+
+    footer{padding:20px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TTF</div>
+        <div>
+          <div style="font-weight:800">Toes To Fitness</div>
+          <div class="muted" style="font-size:12px">Strength • Mobility • Nutrition</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#programs">Programs</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Transform Not Just Your Body, But Your Life Mindset, Nutrition & Workouts, Tailored To You</h1>
+          <p class="muted">Transform your body, mind, and habits with coaching made for real life. From shedding kilos to gaining strength, we’ll guide your journey—step by step. Your best self starts here.</p>
+          <div class="cta">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-ghost">View Programs</button>
+          </div>
+          <div style="margin-top:22px;display:flex;gap:12px;color:var(--muted);font-size:14px">
+            <div><strong>1:1 Coaching</strong><div class="muted">Custom plans</div></div>
+            <div style="margin-left:18px"><strong>Nutrition</strong><div class="muted">Sustainable habits</div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ill">
+            <!-- Hero image of muscular woman holding healthy diet food -->
+            <img src="./6a32d15b-9a34-4568-84e6-a1ce67f0267b.jpg" alt="Muscular woman holding healthy diet food" />
+          </div>
+        </div>
+      </section>
+
+      <section id="programs">
+        <h2>Programs</h2>
+        <p class="muted">Programs designed for different goals — built to be simple, progressive and measurable.</p>
+        <div class="grid" style="margin-top:18px">
+          <div class="feature">
+            <h3>Foundations</h3>
+            <p class="muted">4-week beginner-friendly plan focused on movement patterns, posture and habit building.</p>
+            <p style="margin-top:12px;font-weight:700">₹2,499</p>
+          </div>
+          <div class="feature">
+            <h3>Strength</h3>
+            <p class="muted">12-week strength plan using progressive overload and tailored coaching cues.</p>
+            <p style="margin-top:12px;font-weight:700">₹5,999</p>
+          </div>
+          <div class="feature">
+            <h3>Lean & Toned</h3>
+            <p class="muted">Combines resistance training and nutrition targets to lose fat while holding muscle.</p>
+            <p style="margin-top:12px;font-weight:700">₹6,499</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Toes To Fitness</h2>
+        <p class="muted">Toes To Fitness is a personal training brand focused on sustainable strength and mobility, built for busy people who want clear progress and simple guidance.</p>
+        <div style="display:flex;gap:18px;margin-top:18px;flex-wrap:wrap">
+          <div style="flex:1;min-width:240px;background:var(--glass);padding:12px;border-radius:12px">
+            <h3 style="margin:0 0 8px">Our Philosophy</h3>
+            <p class="muted" style="margin:0">Movement first, then load. Small daily habits compound into long-term change.</p>
+          </div>
+          <div style="flex:1;min-width:240px;background:var(--glass);padding:12px;border-radius:12px">
+            <h3 style="margin:0 0 8px">Coach</h3>
+            <p class="muted" style="margin:0">Certified coach with years of experience in strength training, mobility and nutrition.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <h2>What clients say</h2>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+          <div class="feature test">
+            <div class="avatar">AM</div>
+            <div>
+              <div style="font-weight:700">Aman M.</div>
+              <div class="muted">"Lost 7 kg in 10 weeks — sustainable nutrition and clear coaching."</div>
+            </div>
+          </div>
+
+          <div class="feature test">
+            <div class="avatar">SR</div>
+            <div>
+              <div style="font-weight:700">Sana R.</div>
+              <div class="muted">"I fixed my knee pain and now squat pain-free — mobility work actually helped."</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="muted">Ready to start? Drop a message and we’ll reply within one business day.</p>
+        <form style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px">
+          <input placeholder="Your name" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+          <input placeholder="Email or phone" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+          <input placeholder="Goal (e.g. lose 5kg)" style="grid-column:1/3;padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+          <button type="button" class="btn btn-primary" style="grid-column:1/3;justify-self:start">Send Message</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© Toes To Fitness</div>
+      <div class="muted">Designed with ❤️ • Built in plain HTML</div>
+    </footer>
+  </div>
+</body>
+</html>
+
