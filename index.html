@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Toes To Fitness — Personal Fitness Brand</title>
+  <title>Toes To Fitness — Personal Fitness Journey</title>
   <meta name="description" content="Toes To Fitness — personal training, nutrition coaching, and fitness programs." />
   <style>
     :root{
@@ -57,6 +57,11 @@
     @media (max-width:900px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr}
+    }
+    @media (max-width:600px){
+      header{flex-direction:column;align-items:flex-start}
+      nav{margin-top:8px;gap:8px}
+      .hero h1{font-size:28px}
     }
   </style>
 </head>
@@ -153,13 +158,13 @@
       <section id="contact">
         <h2>Contact</h2>
         <p class="muted">Ready to start? Drop a message and we’ll reply within one business day.</p>
-        <form id="contactForm" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px">
-        <input id="name" placeholder="Your name" />
-        <input id="email" placeholder="Email or phone" />
-        <input id="goal" placeholder="Goal (e.g. lose 5kg)" style="grid-column:1/3" />
-        <button type="submit" class="btn" style="grid-column:1/3;justify-self:start">Send Message</button>
+       <form id="contactForm" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px">
+         <input id="name" placeholder="Your full name" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+         <input id="email" placeholder="Email" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+         <input id="goal" placeholder="Goal (e.g. lose 5kg)" style="grid-column:1/3;padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+         <button type="submit" class="btn btn-primary" style="grid-column:1/3;justify-self:start">Send Message</button>
         </form>
-        </section>
+       </section>
 
     </main>
 
@@ -168,20 +173,19 @@
       <div class="muted">Designed with ❤️ • Built in HTML</div>
     </footer>
   </div>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(event){
-event.preventDefault();
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const goal = document.getElementById("goal").value;
+  <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const goal = document.getElementById("goal").value;
 
+        const mailtoLink = `mailto:toestofitness@gmail.com?subject=New Inquiry from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AGoal: ${encodeURIComponent(goal)}`;
 
-const mailtoLink = `mailto:coach@toestofitness.com?subject=New Inquiry from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AGoal: ${encodeURIComponent(goal)}`;
-
-
-window.location.href = mailtoLink;
-});
-</script>  
+        //window.location.href = mailtoLink;
+        window.open(mailtoLink, '_blank');
+    });
+  </script>  
 </body>
 </html>
 
