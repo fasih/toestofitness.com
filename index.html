@@ -6,6 +6,17 @@
   <title>Toes To Fitness — Personal Fitness Journey</title>
   <link rel="icon" type="image/png" href="77faa5b9-646d-42f7-a063-83667d757b85.jpg">
   <meta name="description" content="Toes To Fitness — personal training, nutrition coaching, and fitness programs." />
+
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/png" href="77faa5b9-646d-42f7-a063-83667d757b85.jpg">
+  <!-- ICO Fallback for Older Browsers -->
+  <link rel="shortcut icon" href="77faa5b9-646d-42f7-a063-83667d757b85.jpg" type="image/x-icon">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="77faa5b9-646d-42f7-a063-83667d757b85.jpg">
+  <!-- Other Sizes -->
+  <link rel="icon" type="image/png" sizes="32x32" href="77faa5b9-646d-42f7-a063-83667d757b85.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="77faa5b9-646d-42f7-a063-83667d757b85.jpg">
+
   <style>
     :root{
       --accent:#ff6b6b;
@@ -24,18 +35,16 @@
     .logo img{
       width:56px;height:56px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(255,107,107,0.12);
     }
-nav{display:flex;gap:16px}
-nav a{color:var(--muted);text-decoration:none;font-weight:600}
-nav a:hover{color:#fff}
 
-.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.menu-toggle span{display:block;width:24px;height:3px;background:#fff;border-radius:2px}
+    nav{display:flex;gap:16px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:#fff}
 
+   .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
+   .menu-toggle span{display:block;width:24px;height:3px;background:#fff;border-radius:2px}
 
-nav.mobile{display:none;flex-direction:column;position:absolute;top:70px;right:0;background:#0b1220;padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
-nav.mobile a{margin:8px 0}
-
-
+   nav.mobile{display:none;flex-direction:column;position:absolute;top:70px;right:0;background:#0b1220;padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+   nav.mobile a{margin:8px 0}
 
     /* Hero */
     .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
@@ -62,6 +71,9 @@ nav.mobile a{margin:8px 0}
     .test{display:flex;gap:12px;align-items:center}
     .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(0deg,#08314a,#07445e);display:inline-flex;align-items:center;justify-content:center;font-weight:700}
 
+    /* Contact */
+    form{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px}
+
     footer{padding:20px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
 
     /* responsive */
@@ -72,22 +84,24 @@ nav.mobile a{margin:8px 0}
 
     @media (max-width:768px){
       nav.desktop{display:none}
-      .menu-toggle{display:flex}
+     .menu-toggle{display:flex}
+     .avatar{width:90px}
+     form {display:flex; flex-direction:column; gap:14px;}
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-<div class="brand">
-<div class="logo">
-<img src="77faa5b9-646d-42f7-a063-83667d757b85.jpg" alt="Toes To Fitness Logo">
-</div>
-<div>
-<div style="font-weight:800">Toes To Fitness</div>
-<div class="muted" style="font-size:12px">Strength • Mobility • Nutrition</div>
-</div>
-</div>
+        <div class="brand">
+        <div class="logo">
+        <img src="77faa5b9-646d-42f7-a063-83667d757b85.jpg" alt="Toes To Fitness Logo">
+        </div>
+        <div>
+        <div style="font-weight:800">Toes To Fitness</div>
+        <div class="muted" style="font-size:12px">Strength • Mobility • Nutrition</div>
+        </div>
+        </div>
         <nav class="desktop">
         <a href="#programs">Programs</a>
         <a href="#about">About</a>
@@ -182,10 +196,10 @@ nav.mobile a{margin:8px 0}
       <section id="contact">
         <h2>Contact</h2>
         <p class="muted">Ready to start? Drop a message and we’ll reply within one business day.</p>
-       <form id="contactForm" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:720px">
-         <input id="name" placeholder="Your full name" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+       <form id="contactForm">
+         <input id="name" placeholder="Your full name" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" required/>
          <input id="email" placeholder="Email" style="padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
-         <input id="goal" placeholder="Goal (e.g. lose 5kg)" style="grid-column:1/3;padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" />
+         <input id="goal" placeholder="Goal (e.g. lose 5kg)" style="grid-column:1/3;padding:12px;border-radius:10px;border:0;background:rgba(255,255,255,0.03);color:#fff" required/>
          <button type="submit" class="btn btn-primary" style="grid-column:1/3;justify-self:start">Send Message</button>
         </form>
        </section>
@@ -194,7 +208,7 @@ nav.mobile a{margin:8px 0}
 
     <footer>
       <div>© Toes To Fitness</div>
-      <div class="muted">Designed with ❤️ • Built in HTML</div>
+      <div class="muted">Designed with ❤️ •</div>
     </footer>
   </div>
   <script>
@@ -209,10 +223,11 @@ nav.mobile a{margin:8px 0}
         //window.location.href = mailtoLink;
         window.open(mailtoLink, '_blank');
     });
-function toggleMenu(){
-const menu=document.getElementById('mobileMenu');
-menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-}
+
+        function toggleMenu(){
+        const menu=document.getElementById('mobileMenu');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
   </script>  
 </body>
 </html>
