@@ -20,8 +20,8 @@
 
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:relative}
     .brand{display:flex;gap:12px;align-items:center}
-    .logo{
-      width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),#ff9a9a);font-weight:700;color:#07203a;box-shadow:0 6px 18px rgba(255,107,107,0.12)
+    .logo img{
+      width:56px;height:56px;border-radius:12px;object-fit:cover;box-shadow:0 6px 18px rgba(255,107,107,0.12);
     }
 nav{display:flex;gap:16px}
 nav a{color:var(--muted);text-decoration:none;font-weight:600}
@@ -78,13 +78,15 @@ nav.mobile a{margin:8px 0}
 <body>
   <div class="container">
     <header>
-      <div class="brand">
-        <div class="logo">TTF</div>
-        <div>
-          <div style="font-weight:800">Toes To Fitness</div>
-          <div class="muted" style="font-size:12px">Strength • Mobility • Nutrition</div>
-        </div>
-      </div>
+<div class="brand">
+<div class="logo">
+<img src="77faa5b9-646d-42f7-a063-83667d757b85.jpg" alt="Toes To Fitness Logo">
+</div>
+<div>
+<div style="font-weight:800">Toes To Fitness</div>
+<div class="muted" style="font-size:12px">Strength • Mobility • Nutrition</div>
+</div>
+</div>
         <nav class="desktop">
         <a href="#programs">Programs</a>
         <a href="#about">About</a>
